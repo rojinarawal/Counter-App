@@ -1,0 +1,86 @@
+:root {
+  --button-font-size: 1rem;
+  --button-padding-vertical: 2vh;
+  --button-padding-horizontal: 2vw;
+  --min-button-width: 10vmin;
+}
+
+.counter-container {
+  text-align: center;
+  margin-top: 5vh;
+}
+
+.counter-display {
+  font-size: 4rem;
+  margin-bottom: 2vh;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 1vw;
+  flex-wrap: wrap;
+}
+
+.counter-button {
+  padding: var(--button-padding-vertical) var(--button-padding-horizontal);
+  font-size: var(--button-font-size);
+  cursor: pointer;
+  border: none;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
+  flex: 1;
+  margin: 0.5rem;
+  min-width: var(--min-button-width);
+}
+
+.decrease {
+  background-color: #f44336;
+  color: white;
+}
+
+.decrease:hover {
+  background-color: #d32f2f;
+}
+
+.reset {
+  background-color: plum;
+  color: black;
+}
+
+.reset:hover {
+  background-color: white;
+}
+
+.increase {
+  background-color: #4caf50;
+  color: white;
+}
+
+.increase:hover {
+  background-color: #388e3c;
+}
+
+@media (max-width: 600px) {
+  :root {
+    --button-font-size: 0.875rem;
+    --button-padding-vertical: 1.5vh;
+    --button-padding-horizontal: 1.5vw;
+  }
+
+  .counter-display {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 400px) {
+  :root {
+    --button-font-size: 0.75rem;
+    --button-padding-vertical: 1vh;
+    --button-padding-horizontal: 1vw;
+  }
+
+  .counter-display {
+    font-size: 2.5rem;
+  }
+}
